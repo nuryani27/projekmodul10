@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Gaya Umum */
+        body {
+            background-color: #ECEBDE;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            color: #007b;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: #D7D3BF;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .list-group-item {
+            border: none;
+            padding-left: 25px;
+        }
+
+        .progress-bar {
+            background-color: #A59D84;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        /* Navbar */
+        .navbar {
+            transition: transform 0.3s ease, top 0.3s ease;
+            z-index: 1030;
+        }
+
+        .navbar.hidden {
+            transform: translateY(-100%);
+        }
+
+        .jumbotron {
+            margin-top: 56px; /* Untuk mencegah tertutup oleh navbar */
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #A59D84;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">Tentang Saya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portofolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="jumbotron">
+        <div class="container">
+            <h1><strong>Selamat Datang di Portofolio Saya</strong></h1>
+            <p>Fokus satu titik, berikan yang terbaik.</p>
+        </div>
+    </header>
+
+    <!-- Konten -->
+    <div class="container mt-5">
+        <h3><strong>Tentang Saya</strong></h3>
+        <hr>
+        <!-- Biografi Singkat -->
+        <div class="card">
+            <div class="card-header">Biografi Singkat</div>
+            <div class="card-body">
+                <p>
+                    Halo! Nama saya <strong>Nuryani</strong>. Saya seorang mahasiswa Sistem Informasi Universitas Kuningan dengan pengalaman dalam menyelesaikan beberapa tugas serta sedikit proyek yang pernah saya buat. Saya memiliki ketertarikan besar pada inovasi teknologi dan selalu berusaha untuk memberikan kontribusi terbaik dalam setiap proyek yang saya kerjakan.
+                </p>
+                <p>
+                    Dengan latar belakang pendidikan yang kuat dan pengalaman yang terus berkembang, saya percaya pada pentingnya belajar dan kerja tim untuk mencapai kesuksesan.
+                </p>
+            </div>
+        </div>
+
+        <!-- Pendidikan -->
+        <div class="card">
+            <div class="card-header">Pendidikan</div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">S1 - Sistem Informasi, Universitas Kuningan (2023 - Sekarang)</li>
+                    <li class="list-group-item">SMA - SMA Negeri 1 Jalaksana (2020 - 2023)</li>
+                    <li class="list-group-item">SMP - SMP Negeri 1 Jalaksana (2017 - 2020)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Keterampilan -->
+        <div class="card">
+            <div class="card-header">Keterampilan</div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Microsoft Word:</strong>
+                        <div class="progress mt-2">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Komunikasi Bisnis:</strong>
+                        <div class="progress mt-2">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Speaking:</strong>
+                        <div class="progress mt-2">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tujuan Karir -->
+        <div class="card">
+            <div class="card-header">Tujuan Karir</div>
+            <div class="card-body">
+                <p>
+                    Dalam lima tahun ke depan, saya bercita-cita untuk menjadi ahli dalam bidang komunikasi manajemen sistem dan bekerja pada proyek-proyek inovatif yang dapat memberikan dampak positif bagi masyarakat. Saya juga ingin terus meningkatkan keterampilan saya dan bisa berbagi ilmu yang sudah didapat kepada generasi berikutnya.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn">Kembali ke Halaman Utama</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Portofolio Nuryani. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scroll ke bawah, sembunyikan navbar
+                navbar.classList.add('hidden');
+            } else {
+                // Scroll ke atas, tampilkan navbar
+                navbar.classList.remove('hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Pastikan tidak ada nilai negatif
+        });
+    </script>
+</body>
+</html>

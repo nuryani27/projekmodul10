@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ECEBDE;
+            padding: 0;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+        }
+        .header {
+            background-color: #A59D84;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .header h1 {
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+        .header p {
+            color: white; /* Mengubah warna teks menjadi putih */
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: top 0.3s; /* Smooth transition */
+        }
+        .navbar.hidden {
+            top: -60px; /* Hide the navbar */
+        }
+        h3 {
+            font-weight: bold;
+            color: #333;
+            margin-top: 30px;
+        }
+        .portfolio-header p {
+            color: #333;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            margin-bottom: 10px;
+        }
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="home.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Tentang Saya</a></li>
+                <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portofolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Selamat Datang di Portofolio Saya</h1>
+        <p>Fokus satu titik, berikan yang terbaik.</p>
+    </header>
+
+    <!-- Konten Portofolio -->
+    <div class="container mt-5">
+        <div class="portfolio-header text-start">
+            <h3>Portfolio Saya</h3>
+            <p>Berikut adalah proyek-proyek yang telah saya buat:</p>
+        </div>
+        <hr>
+        <div id="project-list" class="row">
+            <!-- Proyek akan ditambahkan di sini -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Data proyek dengan gambar lokal
+        const projects = [
+            {
+                image: "projekhtml.png",
+                title: "Projek HTML IDCAMP",
+                description: "Membuat halaman website menggunakan teknik semantic HTML dan layouting.",
+                role: "Menyelesaikan semua tugas dengan penuh tanggung jawab.",
+                result: "Berhasil mendapatkan sertifikat dari proyek yang sudah dikerjakan."
+            },
+            {
+                image: "projekfront-end.png",
+                title: "Projek FRONT-END IDCAMP",
+                description: "Membuat aplikasi front-end web yang interaktif serta memiliki fitur penyimpanan web storage.",
+                role: "Menyelesaikan semua tugas dengan penuh tanggung jawab.",
+                result: "Berhasil mendapatkan sertifikat dari proyek yang sudah dikerjakan."
+            },
+            {
+                image: "projek.jpg",
+                title: "Projek IOT",
+                description: "Membuat pakan kucing otomatis berbasis IOT menggunakan arduino uno.",
+                role: "Menyelesaikan semua tugas dengan penuh tanggung jawab.",
+                result: "Mendapat nilai sebagai pemenuhan tugas."
+            },
+        ];
+
+        // Fungsi untuk merender proyek
+        function renderProjects() {
+            const projectList = document.getElementById("project-list");
+            projectList.innerHTML = "";
+
+            projects.forEach((project) => {
+                const projectCard = `
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="${project.image}" class="card-img-top project-img" alt="${project.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${project.title}</h5>
+                                <p class="card-text">${project.description}</p>
+                                <p><strong>Peran:</strong> ${project.role}</p>
+                                <p><strong>Hasil:</strong> ${project.result}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                projectList.innerHTML += projectCard;
+            });
+        }
+
+        // Render proyek saat halaman dimuat
+        renderProjects();
+
+        let lastScrollTop = 0; // Untuk menyimpan posisi scroll sebelumnya
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Deteksi ukuran layar
+            const isMobile = window.innerWidth <= 768; // Ukuran breakpoint untuk mobile
+
+            if (!isMobile) {
+                // Logika untuk perangkat non-mobile
+                if (scrollTop > lastScrollTop) {
+                    // Scroll ke bawah, sembunyikan navbar
+                    navbar.classList.add('hidden');
+                } else {
+                    // Scroll ke atas, tampilkan navbar
+                    navbar.classList.remove('hidden');
+                }
+            } else {
+                // Untuk perangkat kecil, pastikan navbar selalu terlihat
+                navbar.classList.remove('hidden');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Untuk mencegah nilai negatif
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Portofolio Nuryani. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
